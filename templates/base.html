@@ -20,8 +20,8 @@
         <ul class="nav nav-pills pull-right">
           <li {% if 'index' in request.endpoint %}class="active"{% endif %}><a href="{{ url_for('index') }}">Home</a></li>
           {% if user.is_authenticated %}
-            <li steve {% if 'dashboard' in request.endpoint %}class="active"{% endif %}><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
-            <li><a href="{{ url_for('logout') }}">steveLogout</a></li>
+            <li  {% if 'dashboard' in request.endpoint %}class="active"{% endif %}><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
           {% else %}
             <li {% if 'login' in request.endpoint %}class="active"{% endif %}><a href="{{ url_for('login') }}">Login</a></li>
           {% endif %}

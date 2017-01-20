@@ -38,12 +38,15 @@ app.config['SECRET_KEY'] = 'ilovecookies'
 app.config['STORMPATH_API_KEY_ID']     = STORMPATH_API_KEY_ID
 app.config['STORMPATH_API_KEY_SECRET'] = STORMPATH_API_KEY_SECRET
 app.config['STORMPATH_APPLICATION']    = STORMPATH_APPLICATION
+app.config['STORMPATH_ENABLE_FORGOT_PASSWORD'] = True
+
 
 stormpath_manager = StormpathManager(app)
 stormpath_manager.login_view = '.login'
 
-
+#app.use(stormpath.init(app, {}));
 ##### Website
+
 @app.route('/')
 def index():
     """Basic home page.""" 
@@ -120,6 +123,8 @@ def dashboard():
 
         if request.form.get('color'):
             user.custom_data['color'] = request.form.get('color')
+        if request.form.get('event'):
+            user.custom_data['event'] = request.form.get('event')
 
         user.save()
 
@@ -139,9 +144,9 @@ def logout():
     #return redirect(url_for('index')) 
     return "render_template('steve.html')"
 
-@app.route('/logout1')
+@app.route('/steve')
 @login_required
-def logout1():
+def steve():
     """
     Log out a logged in user.  Then redirect them back to the main page of the
     site.
@@ -150,7 +155,7 @@ def logout1():
     logout_user()
     print url_for('index')
     #return redirect(url_for('index')) 
-    return render_template('login.html')
+    return "render_template('----.html') ..secure area "
 
 if __name__ == '__main__':
     app.run(debug='true',port=5000)

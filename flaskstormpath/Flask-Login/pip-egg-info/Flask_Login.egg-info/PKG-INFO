@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: Flask-Login
+Version: 0.2.9
+Summary: User session management for Flask
+Home-page: https://github.com/maxcountryman/flask-login
+Author: Matthew Frazier
+Author-email: leafstormrush@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
